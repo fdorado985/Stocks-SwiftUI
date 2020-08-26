@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ArticlesView: View {
 
@@ -45,6 +46,9 @@ struct ArticlesView: View {
                 }
 
                 Spacer()
+
+                URLImage(URL(string: article.imageURL)!, content: { $0.image.resizable() })
+                  .frame(width: 100, height: 100)
               }
             }
           }
