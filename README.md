@@ -8,3 +8,5 @@
 ## Description
 
 See a little replicate of the popular Apple's stock app, developed using `SwiftUI` and `MVVM` pattern.
+
+![stocks_demo](screenshots/stocks_demo.png)
