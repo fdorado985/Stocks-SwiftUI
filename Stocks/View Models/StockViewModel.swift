@@ -27,4 +27,8 @@ struct StockViewModel {
   var change: String {
     return stock.change
   }
+
+  init(_ stock: Stock) {
+    self.stock = stock
+  }
 }
