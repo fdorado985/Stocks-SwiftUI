@@ -17,6 +17,37 @@ enum StockServiceError: String, Error {
 
 class StockService {
 
+  static func getTopNews(_ completion: @escaping (Result<[Article], StockServiceError>) -> Void) {
+    guard let url = URL(string: "https://island-bramble.glitch.me/top-news") else {
+      fatalError("URL is not correct")
+    }
+
+    URLSession.shared.dataTask(with: url) { (data, response, error) in
+      guard error == nil else {
+        completion(.failure(.unableToComplete))
+        return
+      }
+
+      guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+        completion(.failure(.invalidResponse))
+        return
+      }
+
+      guard let data = data else {
+        completion(.failure(.invalidData))
+        return
+      }
+
+      do {
+        let decoder = JSONDecoder()
+        let articlesResponse = try decoder.decode([Article].self, from: data)
+        completion(.success(articlesResponse))
+      } catch {
+        completion(.failure(.unableToParse))
+      }
+    }.resume()
+  }
+
   static func getStocks(_ completion: @escaping (Result<[Stock], StockServiceError>) -> Void) {
     guard let url = URL(string: "https://island-bramble.glitch.me/stocks") else {
       fatalError("URL is not correct")
@@ -40,7 +71,6 @@ class StockService {
 
       do {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
         let articlesResponse = try decoder.decode([Stock].self, from: data)
         completion(.success(articlesResponse))
       } catch {
