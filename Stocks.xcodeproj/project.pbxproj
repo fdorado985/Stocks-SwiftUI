@@ -21,6 +21,7 @@
 		A977F55724F6172200764FE6 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977F55624F6172200764FE6 /* StockListView.swift */; };
 		A977F55924F61CE000764FE6 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977F55824F61CE000764FE6 /* Article.swift */; };
 		A977F55B24F61DD200764FE6 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977F55A24F61DD200764FE6 /* ArticleViewModel.swift */; };
+		A977F55D24F61FB000764FE6 /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977F55C24F61FB000764FE6 /* ArticlesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A977F55624F6172200764FE6 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 		A977F55824F61CE000764FE6 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		A977F55A24F61DD200764FE6 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		A977F55C24F61FB000764FE6 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				A977F55424F5E39C00764FE6 /* SearchView.swift */,
 				A977F55624F6172200764FE6 /* StockListView.swift */,
+				A977F55C24F61FB000764FE6 /* ArticlesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				A977F54D24F5DF9800764FE6 /* Stock.swift in Sources */,
 				A977F55024F5E0D900764FE6 /* StockListViewModel.swift in Sources */,
 				A977F53324F5DDB000764FE6 /* AppDelegate.swift in Sources */,
+				A977F55D24F61FB000764FE6 /* ArticlesView.swift in Sources */,
 				A977F53524F5DDB000764FE6 /* SceneDelegate.swift in Sources */,
 				A977F55924F61CE000764FE6 /* Article.swift in Sources */,
 				A977F55524F5E39C00764FE6 /* SearchView.swift in Sources */,
