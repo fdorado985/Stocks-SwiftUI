@@ -10,7 +10,7 @@ import Foundation
 
 class StockListViewModel: ObservableObject {
 
-  var searchTerm = ""
+  @Published var searchTerm = ""
   @Published var stocks = [StockViewModel]()
 
   func load() {
